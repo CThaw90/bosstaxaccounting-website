@@ -1,6 +1,6 @@
 {
   "name": "bosstaxaccounting-website",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This project is responsible for packaging and deploying the public website for bosstaxaccounting.com",
   "main": "index.js",
   "repository": "https://github.com/GSCBInc/bosstaxaccounting-website.git",
