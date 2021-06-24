@@ -20,8 +20,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.0",
     "knockout": "^3.5.1",
     "moment": "^2.29.1"
   },
@@ -38,6 +36,6 @@
     "webpack-cli": "^4.6.0"
   },
   "engines": {
-    "node": ">= 14"
+    "node": ">= 10.0"
   }
 }
