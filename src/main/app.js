@@ -1,4 +1,3 @@
-import 'bootstrap';
 import './styles/styles';
 
 import home from './home/home';
