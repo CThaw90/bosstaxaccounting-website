@@ -12,10 +12,24 @@ header {
 
     .top-header-container {
       padding: 10px 150px 10px 150px;
+
+      @media only screen and (max-width: 650px) {
+        padding: 10px;
+      }
     }
 
     .social-media-container {
-      display: inline-block;
+      @media only screen and (min-width: 830px) {
+        &.desktop {
+          display: inline-block;
+        }
+      }
+
+      @media only screen and (max-width: 830px) {
+        &.desktop {
+          display: none;
+        }
+      }
     }
 
     .contacts-container {
@@ -26,10 +40,14 @@ header {
 
 nav {
   div.navigation-container {
-    padding: 10px 150px 10px 150px;
+    padding: 10px 150px;
     background-color: #FFFFFF;
     align-items: center;
     display: flex;
+
+    @media only screen and (max-width: 700px) {
+      padding: 10px 30px;
+    }
 
     .title {
       width: 160px;
@@ -46,6 +64,12 @@ nav {
       color: #000000;
       font-size: 16px;
       font-weight: bold;
+    }
+
+    @media only screen and (max-width: 985px) {
+      .menu-items-desktop a.nav-link {
+        display: none;
+      }
     }
 
     .contact-btn-container {

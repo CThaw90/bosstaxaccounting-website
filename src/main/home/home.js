@@ -8,11 +8,35 @@ import template from './home.html';
 const api = {};
 const self = {};
 
-self.serviceDropdownVisible = ko.observable(false);
-
-self.toggleServiceDropdown = function () {
-    self.serviceDropdownVisible(!self.serviceDropdownVisible());
+const elements = {};
+const scrollToElement = function (elementId) {
+    const dimensions = elements[elementId] ? elements[elementId].getBoundingClientRect() : null;
+    if (dimensions) {
+        window.scrollBy(0, dimensions.y);
+    }
 };
+
+self.navigateToHome = function () {
+    scrollToElement('home-section');
+};
+
+self.navigateToServices = function () {
+    scrollToElement('services-section');
+};
+
+self.navigateToAboutUs = function () {
+    scrollToElement('about-us-section');
+};
+
+self.navigateToContactUs = function () {
+    scrollToElement('contact-us-section');
+};
+
+self.initElement = function (element) {
+    if (element.id) {
+        elements[element.id] = element;
+    }
+}
 
 api.createUI = function (rootElement) {
     if (!self.element) {

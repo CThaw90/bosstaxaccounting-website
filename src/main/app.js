@@ -1,3 +1,4 @@
+import './bindings/all';
 import './styles/styles';
 
 import home from './home/home';

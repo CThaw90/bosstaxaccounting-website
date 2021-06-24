@@ -2,7 +2,7 @@
     <header>
         <div class="top-header">
             <div class="top-header-container">
-                <div class="social-media-container">
+                <div class="social-media-container desktop">
                     <ul class="list-inline">
                         <li class="list-inline-item text-white">Connect with us:</li>
                         <li class="list-inline-item">
@@ -16,7 +16,7 @@
                 <div class="contacts-container">
                     <ul class="list-inline">
                         <li class="list-inline-item"><a class="text-accent">bosstaxact@gmail.com</a></li>
-                        <li class="list-inline-item text-white">| Call us now: <a class="text-accent">(563) 204-6333</a></li>
+                        <li class="list-inline-item text-white">Call us now: <a class="text-accent">(563) 204-6333</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,28 +27,28 @@
             <div class="title"><h3>BOSS TAX & ACCOUNTING SERVICES</h3></div>
             <div class="menu-items-desktop">
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)">Home</a></li>
-                    <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)">Services</a></li>
-                    <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)">About us</a></li>
+                    <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)" data-bind="click: navigateToHome">Home</a></li>
+                    <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)" data-bind="click: navigateToServices">Services</a></li>
+                    <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)" data-bind="click: navigateToAboutUs">About us</a></li>
                 </ul>
             </div>
             <div class="contact-btn-container">
-                <button class="text-white">Contact us</button>
+                <button class="text-white" data-bind="click: navigateToContactUs">Contact us</button>
             </div>
         </div>
     </nav>
-    <section>
+    <section id="home-section" data-bind="init: initElement">
         <div class="desktop-backdrop">
             <h1 class="desktop-slogan text-white">A boss gets it done</h1>
             <p class="desktop-slogan-caption text-white">
                 Prepare your taxes with licensed, experienced professionals.
                 We specialize in basic, self-employed, and corporate tax returns.
             </p>
-            <button class="more-details">More details</button>
+            <button class="more-details" data-bind="click: navigateToContactUs">More details</button>
         </div>
     </section>
     <section>
-        <div class="desktop-translated">
+        <div id="services-section" class="desktop-translated" data-bind="init: initElement">
             <div class="info-card">
                 <div><img class="info-card-image" alt="Tax services" src="https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fpay_taxes_card_image.png?v=1624496731397" /></div>
                 <div class="info-card-details">
@@ -173,7 +173,7 @@
         </div>
         !-- -->
     </section>
-    <section>
+    <section id="about-us-section" data-bind="init: initElement">
         <div class="about-us-section desktop">
             <div class="image-container">
                 <img class="about-us-image" alt="about-us" src="https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fabout_us_hands_image.png?v=1624496684949" />
@@ -253,7 +253,7 @@
             <img class="logo-image" alt="boss tax logo" src="https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2FBoss%20Tax%20Accounting%20logo-02.png?v=1624496696718" />
         </div>
     </section>
-    <section>
+    <section id="contact-us-section" data-bind="init: initElement">
         <div class="footer-section">
             <div class="footer-section-services">
                 <h1>Services</h1>
