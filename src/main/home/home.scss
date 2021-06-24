@@ -70,7 +70,7 @@ nav {
 
 section {
   .desktop-backdrop {
-    background-image: url('https://previews.dropbox.com/p/thumb/ABP1P25EjLx4p0Svv468nbqxh7dyE-2wNFx6z7LPGpAfgPiYz-uK9nkOIxOq4DBwqEAV012x87eyOB8JC5XGD_zR3kol1hNqH3gbChyrf1lebfI3PeqOiinvnxQ887jLc-sLwdO4-gldqIdZ1uhk4-psvR12OqKJ5klK8FCaav72YRGGYXnLWlSy7FiN1zAT_o7YtzqljzUJ5oT-f-FYXQtzSD0F0KoYtnKwEedpLvgSp0A13t1BSzoKZfFkjoNdPgg9aLBoBUZGzYBKGQlTIYUoq6yXiy_SvjU8LyWiruiSN-g0g8aunMvP-H5_dhuuR_01la4e-dFXJYSbGjn7eoL7WzPm1_PLzy3G2cb39DyjPQ/p.png?fv_content=true&size_mode=5');
+    background-image: url('https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fcoins_backdrop.png?v=1624496709129');
     background-repeat: no-repeat;
     background-color: #000000;
     background-size: 90% 100%;
@@ -107,8 +107,29 @@ section {
     }
   }
 
+  @media only screen and (max-width: 1145px) {
+    .desktop-translated {
+      margin: 0 10px 0 10px;
+    }
+  }
+
+  @media only screen and (min-width: 1145px) {
+    .desktop-translated {
+      margin: 0 50px 0 50px;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .desktop-translated {
+      display: none;
+    }
+
+    .mobile-translated {
+
+    }
+  }
+
   .desktop-translated {
-    margin: 0 50px 0 50px;
     transform: translateY(-50px);
     justify-content: space-between;
     display: flex;
@@ -135,6 +156,7 @@ section {
           color: #FFFFFF;
           margin-top: 0;
         }
+
         p {
           font-family: 'Open sans', serif;
           line-height: 26px;
@@ -146,20 +168,39 @@ section {
     }
   }
 
-  .about-us-section {
-    margin: 75px 50px 75px 50px;
-    display: flex;
-    justify-content: space-between;
-    height: 200px;
-
-    .about-us-image {
-      height: 180px;
-      width: 530px;
+  @media only screen and (max-width: 1140px) {
+    .about-us-section.desktop {
+      display: none;
     }
 
-    .about-us-details.desktop {
-      width: 500px;
+    .about-us-section.mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      max-width: 550px;
+      margin: auto;
+    }
+  }
 
+  @media only screen and (min-width: 1140px) {
+    .about-us-section.mobile {
+      display: none;
+    }
+
+    .about-us-section.desktop {
+      margin: 75px 50px 75px 50px;
+      display: flex;
+      justify-content: space-between;
+      height: 200px;
+
+      .about-us-details.desktop {
+        width: 500px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .about-us-section {
       .title {
         font-family: 'Open sans', serif;
         margin: 5px 0 5px 0;
@@ -173,12 +214,18 @@ section {
         line-height: 26px;
         margin: 5px 0 5px 0;
         color: #000000;
+        width: 530px;
+      }
+
+      .about-us-image {
+        height: 180px;
+        width: 530px;
       }
     }
   }
 
   .client-reviews {
-    background-image: url('https://uc090dc6aaf340deb01c87645020.previews.dropboxusercontent.com/p/thumb/ABMhmKBY26uUba4vV9C4UDI2uD-VcSTNtufN-kxqvYbStVb_zf0WFGSnRd3GZQErjCgZ_rRvAAxiE1gZZzF7s6TWVJJBtTQ3JBtUfNMVJ_f-R9RiNANhdrutOawk8ySZke_EnYTyrwx4GD3KmyGZ6xQOoR_eqlteKwpLwXRtD1RWIHnEcO3h9VjIgmy3eYYcAaavkx69PjyLvzR4OrRmqMR-UTNrw4YO-F76PXUdYTJRSduS7WvZ121deLxco3uU_R96PhnV5g0s9y4hmM7ifsxWHcKxIPwTwgtb-RVlt6jEOOwonYYNovKTr_qF5qHEjOM5WtvP4qlh1nZdXh6M4Xs089b_f2xrwdkGzi2A1LlohEIIsrUDvrB6fsRe4otFYdEUKetfoWREL6aFbowfeLnqTNh7Ogz22aHnOrBjnHLmiFrDZdD99C63bOBKNY6p3JULF1K_HLZAThcWfexKSMgG/p.png?size=2048x1536&size_mode=3');
+    background-image: url('https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Freviews_backdrop.png?v=1624496737069');
     background-repeat: no-repeat;
     background-color: #444C55;
     background-size: cover;
