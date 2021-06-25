@@ -101,6 +101,16 @@ section {
     padding: 150px 0 0 150px;
     height: 450px;
 
+    @media only screen and (max-width: 800px) {
+      padding: 150px 0 0 75px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      background-size: 100% 100%;
+      text-align: center;
+      padding: 125px 15px 0 15px;
+    }
+
     .desktop-slogan {
       font-family: 'Barlow Condensed', cursive;
       text-transform: uppercase;
@@ -112,6 +122,12 @@ section {
       font-family: 'Open sans', cursive;
       max-width: 500px;
       margin: 0 0 10px 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .desktop-slogan {
+        font-size: 40px;
+      }
     }
 
     .more-details {
@@ -206,6 +222,36 @@ section {
         color: #FFFFFF;
         margin: 0;
       }
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .desktop-translated {
+      transform: translateY(0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 50px 0;
+      padding: 0 10px 0 10px;
+
+      .info-card {
+        width: 330px;
+        height: 360px;
+        margin-bottom: 50px;
+
+        .info-card-image {
+          height: 200px;
+          width: 330px;
+        }
+
+        .info-card-details {
+          box-sizing: border-box;
+          width: 330px;
+        }
+      }
+    }
+    .tablet-translated {
+      display: none;
     }
   }
 
@@ -333,6 +379,14 @@ section {
 
         @media only screen and (max-width: 745px) {
           padding: 25px 50px;
+        }
+
+        @media only screen and (max-width: 515px) {
+          padding: 10px 25px;
+
+          .description-title {
+            font-size: 30px;
+          }
         }
 
         .client-reviews-container {
