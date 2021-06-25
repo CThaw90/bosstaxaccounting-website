@@ -32,6 +32,10 @@ self.navigateToContactUs = function () {
     scrollToElement('contact-us-section');
 };
 
+self.navigateToMobileApp = function () {
+    window.location.href = 'https://taxestogo.com/App/Download/9881';
+};
+
 self.initElement = function (element) {
     if (element.id) {
         elements[element.id] = element;

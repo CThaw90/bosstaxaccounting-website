@@ -149,6 +149,21 @@ section {
         color: #000000;
       }
     }
+
+    .mobile {
+      display: none;
+    }
+
+    @media only screen and (max-width: 380px) {
+      .more-details.desktop {
+        display: none;
+      }
+
+      .more-details.mobile {
+        display: block;
+        margin: auto;
+      }
+    }
   }
 
   @media only screen and (max-width: 1145px) {
