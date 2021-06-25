@@ -47,8 +47,8 @@
             <button class="more-details" data-bind="click: navigateToContactUs">More details</button>
         </div>
     </section>
-    <section>
-        <div id="services-section" class="desktop-translated" data-bind="init: initElement">
+    <section id="services-section" data-bind="init: initElement">
+        <div class="desktop-translated">
             <div class="info-card">
                 <div><img class="info-card-image" alt="Tax services" src="https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fpay_taxes_card_image.png?v=1624496731397" /></div>
                 <div class="info-card-details">
@@ -88,6 +88,50 @@
                 </div>
             </div>
         </div>
+        <div class="tablet-translated" data-attr-width="1075px">
+                <div class="info-card-row">
+                    <div class="info-card">
+                        <div><img class="info-card-image" alt="Tax services" src="https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fpay_taxes_card_image.png?v=1624496731397" /></div>
+                        <div class="info-card-details">
+                            <h3>Tax services</h3>
+                            <p>
+                                Prepare your taxes with licensed, experienced professionals. We specialize in basic,
+                                self-employed, and corporate tax returns
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div><img class="info-card-image" alt="Accounting services" src="https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Faccounting_card_image.jpg?v=1624496691133" /></div>
+                        <div class="info-card-details">
+                            <h3>Accounting services</h3>
+                            <p>Bookkeeping, payroll, estimated & sales tax fillings, etc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card-row">
+                    <div class="info-card">
+                        <div><img class="info-card-image" alt="Individuals" src="https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Findividual_card_image.jpg?v=1624496715637" /></div>
+                        <div class="info-card-details">
+                            <h3>Individuals</h3>
+                            <p>Credit Services</p>
+                            <p>Expungement Services</p>
+                            <p>Uncontested Divorce Filings</p>
+                            <p>Bankruptcy Petition Preparation</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div><img class="info-card-image" alt="business solutions" src="https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fbusiness_card_image.jpg?v=1624496703101" /></div>
+                        <div class="info-card-details">
+                            <h3>Business solutions</h3>
+                            <p>Assistance with EIN (Tax ID)</p>
+                            <p>Registration</p>
+                            <p>Business Filings</p>
+                            <p>Change of name/address</p>
+                            <p>Business plans</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <!--
         <div style="display: none" class="container">
             <div class="row">
@@ -207,42 +251,42 @@
         <div class="client-reviews desktop">
             <div class="text-container">
                 <span class="section-title-border"></span>
-                <h3 class="title text-white">Testimonials</h3>
-                <h1 class="description-title text-white">What clients are saying</h1>
+                <h3 class="title">Testimonials</h3>
+                <h1 class="description-title">What clients are saying</h1>
                 <div class="client-reviews-container">
                     <div class="client-review">
-                        <p class="review text-white">
+                        <p>
                             I have gone to Boss Tax and Accounting now for two years and I can't recommend
                             them enough. Always thorough and accommodating in a timely manor and willing to
                             answer any questions you might have! Excellent!
                         </p>
-                        <p class="client text-white">Hayley Hoffman</p>
-                        <p class="review-date text-white">May 4 2021</p>
+                        <p class="client">Hayley Hoffman</p>
+                        <p class="review-date">May 4 2021</p>
                     </div>
                     <div class="client-review">
-                        <p class="text-white">
+                        <p>
                             LaTisha is an intelligent professional who is quick and effective with services
                             pertaining to business administration, taxes and accounting. She is also very
                             personable and consistently delivers more than satisfactory results
                         </p>
-                        <p class="client text-white">Chris Thaw</p>
-                        <p class="review-date text-white">May 4 2021</p>
+                        <p class="client">Chris Thaw</p>
+                        <p class="review-date">May 4 2021</p>
                     </div>
                     <div class="client-review">
-                        <p class="text-white">
+                        <p>
                             Friendly & gets people in fast. Helped me figure everything out with my taxes
                         </p>
-                        <p class="client text-white">Taylor Paige</p>
-                        <p class="review-date text-white">May 4 2021</p>
+                        <p class="client">Taylor Paige</p>
+                        <p class="review-date">May 4 2021</p>
                     </div>
                     <div class="client-review">
-                        <p class="text-white">
+                        <p>
                             Just had my 2019 taxes done by LaTisha. She was fast, friendly and simply amazing.
                             She listened and answered my questions regarding some tax issues I have. I recommend
                             Boss Tax & Accounting. Their tax filing fee is very reasonable.
                         </p>
-                        <p class="client text-white">Angie Wonderling</p>
-                        <p class="review-date text-white">April 11 2021</p>
+                        <p class="client">Angie Wonderling</p>
+                        <p class="review-date">April 11 2021</p>
                     </div>
                 </div>
             </div>
@@ -269,20 +313,22 @@
             <div class="footer-contact-us">
                 <h1>Contact us</h1>
                 <form>
-                    <input type="text" title="name" placeholder="Name" />
-                    <input type="email" title="email" placeholder="Email" />
-                    <select title="service">
-                        <option value="">Select service</option>
-                        <option>Tax services</option>
-                        <option>Accounting</option>
-                        <option>Credit services</option>
-                        <option>Expungement services</option>
-                        <option>Uncontested divorce filings</option>
-                        <option>Bankruptcy petition preparation</option>
-                        <option>Legal forms</option>
-                        <option>Business</option>
-                    </select>
-                    <button id="contact-us-button" type="button" class="accent">Send</button>
+                    <div><input type="text" title="name" placeholder="Name" /></div>
+                    <div><input type="email" title="email" placeholder="Email" /></div>
+                    <div>
+                        <select title="service" class="select-services">
+                            <option value="">Select service</option>
+                            <option>Tax services</option>
+                            <option>Accounting</option>
+                            <option>Credit services</option>
+                            <option>Expungement services</option>
+                            <option>Uncontested divorce filings</option>
+                            <option>Bankruptcy petition preparation</option>
+                            <option>Legal forms</option>
+                            <option>Business</option>
+                        </select>
+                    </div>
+                    <div><button id="contact-us-button" type="button" class="accent">Send</button></div>
                 </form>
             </div>
             <div class="footer-connect-info">

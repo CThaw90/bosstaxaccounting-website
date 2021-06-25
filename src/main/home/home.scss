@@ -140,54 +140,71 @@ section {
   @media only screen and (min-width: 1145px) {
     .desktop-translated {
       margin: 0 50px 0 50px;
+      justify-content: space-between;
+      display: flex;
+    }
+
+    .tablet-translated, .mobile-translated {
+      display: none;
     }
   }
 
-  @media only screen and (max-width: 1100px) {
-    .desktop-translated {
+  @media only screen and (max-width: 1145px) {
+    .desktop-translated, .mobile-translated {
       display: none;
     }
 
-    .mobile-translated {
+    .tablet-translated {
+      margin: 0 50px 0 50px;
+      align-items: center;
+      display: block;
 
+      .info-card-row {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 450px;
+
+        .info-card, .info-card-image {
+          width: 330px;
+        }
+      }
     }
   }
 
-  .desktop-translated {
+  .desktop-translated, .tablet-translated {
     transform: translateY(-50px);
-    justify-content: space-between;
-    display: flex;
+  }
 
-    .info-card {
+  .info-card {
+    width: 260px;
+    height: 360px;
+
+    .info-card-image {
+      display: block;
+      height: 170px;
       width: 260px;
-      height: 360px;
+    }
 
-      .info-card-image {
-        display: block;
-        height: 170px;
-        width: 260px;
+    .info-card-details {
+      background-color: #252E39;
+      height: 190px;
+      padding: 20px;
+
+      h3 {
+        font-family: 'Open sans', serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 0;
       }
 
-      .info-card-details {
-        background-color: #252E39;
-        height: 190px;
-        padding: 20px;
-
-        h3 {
-          font-family: 'Open sans', serif;
-          text-transform: uppercase;
-          text-align: center;
-          color: #FFFFFF;
-          margin-top: 0;
-        }
-
-        p {
-          font-family: 'Open sans', serif;
-          line-height: 26px;
-          font-size: 14px;
-          color: #FFFFFF;
-          margin: 0;
-        }
+      p {
+        font-family: 'Open sans', serif;
+        line-height: 26px;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin: 0;
       }
     }
   }
@@ -253,7 +270,6 @@ section {
     background-repeat: no-repeat;
     background-color: #444C55;
     background-size: cover;
-    height: 750px;
     opacity: .74;
 
     .text-container {
@@ -264,6 +280,7 @@ section {
         line-height: 26px;
         font-size: 18px;
         margin-bottom: 0;
+        color: #FFFFFF;
       }
 
       .description-title {
@@ -272,6 +289,7 @@ section {
         line-height: 26px;
         font-size: 40px;
         margin-top: 5px;
+        color: #FFFFFF;
       }
 
       .client-reviews-container {
@@ -280,12 +298,14 @@ section {
 
         .client-review {
           margin-right: 15px;
+          color: #FFFFFF;
           width: 100%;
 
           p {
             font-family: 'Open Sans', cursive;
             line-height: 26px;
             font-size: 18px;
+            color: #FFFFFF;
             margin: 0;
           }
         }
@@ -294,6 +314,39 @@ section {
           margin-bottom: 5px;
           margin-top: 20px;
           font-weight: 600;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1075px) {
+    .client-reviews {
+      background-color: #FFFFFF;
+      background-image: none;
+
+      .text-container {
+
+        .title, .description-title {
+          color: #000000;
+        }
+
+        @media only screen and (max-width: 745px) {
+          padding: 25px 50px;
+        }
+
+        .client-reviews-container {
+          flex-direction: column;
+
+
+          .client-review {
+            margin-bottom: 15px;
+
+            p, p.client {
+              color: #000000;
+              margin-top: 0;
+            }
+          }
         }
       }
     }
@@ -316,7 +369,6 @@ section {
     justify-content: center;
     padding: 50px 75px 50px 75px;
     background-color: #444C55;
-    height: 300px;
 
     h1 {
       font-family: 'Barlow Condensed', cursive;
@@ -368,6 +420,36 @@ section {
 
     div.footer-connect-info {
       width: 180px;
+    }
+
+
+    @media only screen and (max-width: 850px) {
+      .footer-section-services {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 620px) {
+      flex-direction: column;
+      align-items: center;
+
+      padding: 20px;
+      div {
+        width: 100%;
+      }
+
+      .footer-contact-us {
+        input, select.select-services {
+          box-sizing: border-box;
+          width: 100%;
+        }
+      }
+
+      div.footer-connect-info {
+        text-align: center;
+        width: 320px;
+      }
+
     }
   }
 }
