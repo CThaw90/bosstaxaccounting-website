@@ -10,6 +10,10 @@ header {
     height: 50px;
     width: 100%;
 
+    @media only screen and (max-width: 360px) {
+      height: 80px;
+    }
+
     .top-header-container {
       padding: 10px 150px 10px 150px;
 
@@ -304,26 +308,57 @@ section {
 
   @media only screen and (min-width: 600px) {
     .about-us-section {
-      .title {
-        font-family: 'Open sans', serif;
-        margin: 5px 0 5px 0;
-        line-height: 26px;
-        font-size: 18px;
-        color: #62727B;
-      }
-
       .description {
-        font-family: 'Open sans', cursive;
-        line-height: 26px;
-        margin: 5px 0 5px 0;
-        color: #000000;
-        width: 530px;
+        padding: 5px;
+        width: 100%;
       }
 
       .about-us-image {
         height: 180px;
         width: 530px;
       }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .about-us-section {
+      .description {
+        width: 100%;
+        margin: 0;
+      }
+
+      .about-us-image {
+        height: 180px;
+        width: 330px;
+      }
+    }
+  }
+
+  .about-us-section {
+    .title {
+      font-family: 'Open sans', serif;
+      margin: 5px 0 5px 0;
+      line-height: 26px;
+      font-size: 18px;
+      color: #62727B;
+    }
+
+    .description {
+      font-family: 'Open sans', cursive;
+      line-height: 26px;
+      color: #000000;
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .image-container {
+    margin: auto;
+  }
+
+  @media only screen and (max-width: 330px) {
+    .about-us-section .image-container .about-us-image {
+      width: 300px;
     }
   }
 
