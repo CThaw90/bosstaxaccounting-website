@@ -11,7 +11,10 @@ const APP_FILENAME = 'index.js';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     title: 'Boss Tax and Accounting',
-    filename: HTML_FILE
+    filename: HTML_FILE,
+    meta: {
+        viewport: 'width=device-width,intial-scale=1,minimum-scale=1,maximum-scale=1'
+    }
 });
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
