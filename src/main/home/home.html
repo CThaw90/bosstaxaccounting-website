@@ -316,22 +316,19 @@
             <div class="footer-contact-us">
                 <h1>Contact us</h1>
                 <form>
-                    <div><input type="text" title="name" placeholder="Name" /></div>
-                    <div><input type="email" title="email" placeholder="Email" /></div>
-                    <div>
-                        <select title="service" class="select-services">
-                            <option value="">Select service</option>
-                            <option>Tax services</option>
-                            <option>Accounting</option>
-                            <option>Credit services</option>
-                            <option>Expungement services</option>
-                            <option>Uncontested divorce filings</option>
-                            <option>Bankruptcy petition preparation</option>
-                            <option>Legal forms</option>
-                            <option>Business</option>
-                        </select>
+                    <div data-bind="with: name">
+                        <input type="text" title="name" placeholder="Name" data-bind="value: value, css: { error: error }" />
                     </div>
-                    <div><button id="contact-us-button" type="button" class="accent">Send</button></div>
+                    <div data-bind="with: email">
+                        <input type="email" title="email" placeholder="Email" data-bind="value: value, css: { error: error }" />
+                    </div>
+                    <div data-bind="with: services">
+                        <select data-bind="options: options, value: value, optionsCaption: 'Select service', css: { error: error }" title="service" class="select-services"></select>
+                    </div>
+                    <div>
+                        <button data-bind="visible: submitButtonVisible, click: submitContact" id="send-contact-button" type="button" class="accent">Send</button>
+                        <p data-bind="visible: !submitButtonVisible()" class="text-white">Thank you, we will be in touch shortly!</p>
+                    </div>
                 </form>
             </div>
             <div class="footer-connect-info">
