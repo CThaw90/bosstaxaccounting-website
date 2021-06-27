@@ -57,7 +57,6 @@ self.submitContact = function () {
     self.email.error(!self.email.value() || self.email.showErrorText());
     self.service.error(!self.service.value());
 
-
     if (!self.name.error() && !self.email.error() && !self.service.error() && !self.email.showErrorText()) {
         self.state.current(FORM_STATE.PENDING)
         service.sendEmail({
