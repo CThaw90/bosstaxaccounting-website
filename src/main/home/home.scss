@@ -329,7 +329,7 @@ section {
       }
 
       .about-us-image {
-        height: 180px;
+        height: 200px;
         width: 530px;
       }
     }
@@ -337,14 +337,15 @@ section {
 
   @media only screen and (max-width: 600px) {
     .about-us-section {
+      padding: 0 10px 0 10px;
       .description {
         width: 100%;
         margin: 0;
       }
 
       .about-us-image {
-        height: 180px;
-        width: 330px;
+        height: 200px;
+        width: 100%;
       }
     }
   }
@@ -545,6 +546,12 @@ section {
             color: red;
           }
         }
+      }
+
+      .error-text {
+        transform: translateY(-8px);
+        text-align: center;
+        color: red;
       }
     }
 

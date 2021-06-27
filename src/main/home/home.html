@@ -29,7 +29,7 @@
                 <ul class="list-inline">
                     <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)" data-bind="click: navigateToHome">Home</a></li>
                     <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)" data-bind="click: navigateToServices">Services</a></li>
-<!--                    <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)" data-bind="click: navigateToAboutUs">About us</a></li>-->
+                    <li class="list-inline-item"><a class="nav-link" href="javascript:void(0)" data-bind="click: navigateToAboutUs">About us</a></li>
                 </ul>
             </div>
             <div class="contact-btn-container">
@@ -325,6 +325,7 @@
                     </div>
                     <div data-bind="with: email">
                         <input type="email" title="email" placeholder="Email" data-bind="value: value, css: { error: error }" />
+                        <div data-bind="visible: showErrorText" class="error-text">This email is invalid. Please enter a valid email address.</div>
                     </div>
                     <div data-bind="with: service">
                         <select data-bind="options: options, value: value, optionsCaption: 'Select service', css: { error: error }" title="service" class="select-services"></select>
@@ -332,7 +333,7 @@
                     <div data-bind="with: state">
                         <button data-bind="visible: idle, click: $parent.submitContact" id="send-contact-button" type="button" class="accent">Send</button>
                         <div class="fa-3x" data-bind="visible: pending"><i class="fas fa-circle-notch fa-spin"></i></div>
-                        <p data-bind="visible: submitted" class="text-white">Thank you, we will be in touch shortly!</p>
+                        <p data-bind="visible: submitted" class="text-white" style="text-align: center">Thank you, we will be in touch shortly!</p>
                     </div>
                 </form>
             </div>
