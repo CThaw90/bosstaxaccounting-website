@@ -154,7 +154,7 @@ section {
       display: none;
     }
 
-    @media only screen and (max-width: 380px) {
+    @media only screen and (max-width: 500px) {
       .more-details.desktop {
         display: none;
       }
@@ -569,7 +569,7 @@ section {
     @media only screen and (max-width: 620px) {
       flex-direction: column;
       align-items: center;
-      
+
       .confirmation-text {
         text-align: center;
       }
