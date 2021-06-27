@@ -218,7 +218,7 @@
         </div>
         !-- -->
     </section>
-    <!-- --
+
     <section id="about-us-section" data-bind="init: initElement">
         <div class="about-us-section desktop">
             <div class="image-container">
@@ -228,9 +228,11 @@
                 <span class="section-title-border"></span>
                 <h3 class="title">About us</h3>
                 <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
-                    bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo
-                    commodo. Proin sodales pulvinar tempor.
+                    Boss Tax and Accounting has been providing clients personalized services throughout the Quad Cities area
+                    with growing success. With our certified training and expansive financial, credit and tax knowledge, we
+                    are equipped to handle all of your tax preparation, bankruptcy, business and credit service needs, no
+                    matter how complex. Whether you require assistance at the corporate or personal level, we are ready to
+                    serve as your tax planners and select accounting and credit needs.
                 </p>
             </div>
         </div>
@@ -249,7 +251,7 @@
             </div>
         </div>
     </section>
-    !-- -->
+
     <section>
         <div class="client-reviews desktop">
             <div class="text-container">
@@ -322,12 +324,13 @@
                     <div data-bind="with: email">
                         <input type="email" title="email" placeholder="Email" data-bind="value: value, css: { error: error }" />
                     </div>
-                    <div data-bind="with: services">
+                    <div data-bind="with: service">
                         <select data-bind="options: options, value: value, optionsCaption: 'Select service', css: { error: error }" title="service" class="select-services"></select>
                     </div>
-                    <div>
-                        <button data-bind="visible: submitButtonVisible, click: submitContact" id="send-contact-button" type="button" class="accent">Send</button>
-                        <p data-bind="visible: !submitButtonVisible()" class="text-white">Thank you, we will be in touch shortly!</p>
+                    <div data-bind="with: state">
+                        <button data-bind="visible: idle, click: $parent.submitContact" id="send-contact-button" type="button" class="accent">Send</button>
+                        <div class="fa-3x" data-bind="visible: pending"><i class="fas fa-circle-notch fa-spin"></i></div>
+                        <p data-bind="visible: submitted" class="text-white">Thank you, we will be in touch shortly!</p>
                     </div>
                 </form>
             </div>
