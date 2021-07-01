@@ -85,6 +85,10 @@ self.navigateToContactUs = function () {
     scrollToElement('contact-us-section');
 };
 
+self.navigateToScheduleAnAppointment = function () {
+    window.location.href = 'https://app.acuityscheduling.com/schedule.php?owner=21290007';
+}
+
 self.navigateToMobileApp = function () {
     window.location.href = 'https://taxestogo.com/App/Download/9881';
 };

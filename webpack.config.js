@@ -13,7 +13,20 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     title: 'Boss Tax and Accounting',
     filename: HTML_FILE,
     meta: {
-        viewport: 'width=device-width,intial-scale=1,minimum-scale=1,maximum-scale=1'
+        viewport: 'width=device-width,intial-scale=1,minimum-scale=1,maximum-scale=1',
+        cache: {
+            mustRevalidate: true,
+            httpEquiv: 'Cache-Control',
+            content: 'max-age=0',
+        },
+        noCache: {
+            httpEquiv: 'Pragma',
+            content: 'no-cache'
+        },
+        expires: {
+            httpEquiv: 'Expires',
+            content: '0'
+        }
     }
 });
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
