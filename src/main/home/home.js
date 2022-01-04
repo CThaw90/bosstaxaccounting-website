@@ -37,9 +37,8 @@ self.email = {
 };
 self.service = {
     options: [
-        'Tax services', 'Accounting', 'Credit services', 'Expungement services',
-        'Uncontested divorce filings', 'Bankruptcy petition preparation',
-        'Legal forms', 'Business'
+        'Tax services', 'Accounting', 'Credit services', 'Uncontested divorce filings',
+        'Bankruptcy petition preparation', 'Legal forms', 'Business'
     ],
     value: ko.observable(),
     error: ko.observable(),
@@ -50,6 +49,13 @@ self.email.value.subscribe(v => {
     self.email.error(!v);
 });
 self.service.value.subscribe(v => self.service.error(!v));
+self.aboutUsText = ko.observable(
+    'Boss Tax and Accounting has been providing clients personalized services based in the Quad Cities area of ' +
+    'Iowa and Illinois with growing success. We also provide service virtually in all 50 states. With our certified training ' +
+    'and expansive financial, credit and tax knowledge, we are equipped to handle all of our tax preparation, bankruptcy, ' +
+    'business and credit service needs, no matter how complex. Whether you require assistance at the corporate or personal ' +
+    'level, we are ready to serve as your tax planners and select accounting and credit needs'
+);
 
 self.submitContact = function () {
     self.name.error(!self.name.value());

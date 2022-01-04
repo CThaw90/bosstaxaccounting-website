@@ -1,3 +1,5 @@
+$app-primary-color: #252E39;
+
 body {
   font-family: sans-serif;
   font-size: 14px;
@@ -6,7 +8,7 @@ body {
 
 header {
   div.top-header {
-    background-color: #252E39;
+    background-color: $app-primary-color;
     height: 50px;
     width: 100%;
 
@@ -98,7 +100,7 @@ nav {
 
 section {
   .desktop-backdrop {
-    background-image: url('https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fcoins_backdrop.png?v=1624496709129');
+    /* background-image: url('https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fcoins_backdrop.png?v=1624496709129'); */
     background-repeat: no-repeat;
     background-color: #000000;
     background-size: 90% 100%;
@@ -176,7 +178,19 @@ section {
     .desktop-translated {
       margin: 0 50px 0 50px;
       justify-content: space-between;
+      flex-direction: column;
       display: flex;
+
+      .services-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        &:first-child {
+          margin-bottom: 75px;
+        }
+
+      }
     }
 
     .tablet-translated, .mobile-translated {
@@ -274,6 +288,58 @@ section {
     }
   }
 
+  .meet-the-team {
+    margin: 75px 50px 75px 50px;
+    height: 375px;
+
+    .title {
+      font-family: 'Open sans', serif;
+      margin: 5px 0 5px 0;
+      line-height: 26px;
+      font-size: 18px;
+      color: #62727B;
+    }
+
+    .team-profile-card {
+      margin: 10px;
+
+      p {
+        text-align: center;
+
+        &.title, &.credentials, &.description {
+          margin: 2px
+        }
+
+        &.credentials {
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        &.description {
+          font-size: 14px;
+        }
+      }
+
+      .image-container {
+        border: 1px solid $app-primary-color;
+        border-radius: 50%;
+        height: 300px;
+        width: 265px;
+
+        img {
+          border-radius: 50%;
+          height: 300px;
+          width: 265px
+        }
+      }
+    }
+  }
+
+  .meet-the-team-section-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
   @media only screen and (max-width: 330px) {
     .desktop-translated {
       padding: 0;
@@ -329,7 +395,7 @@ section {
       }
 
       .about-us-image {
-        height: 200px;
+        height: 240px;
         width: 530px;
       }
     }
@@ -347,6 +413,14 @@ section {
         height: 200px;
         width: 100%;
       }
+    }
+
+    .meet-the-team-section-container {
+      flex-direction: column;
+    }
+
+    .meet-the-team {
+      height: 725px;
     }
   }
 

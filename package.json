@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "choices.js": "^9.0.1",
     "knockout": "^3.5.1",
     "moment": "^2.29.1"
   },
