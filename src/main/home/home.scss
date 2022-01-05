@@ -453,10 +453,8 @@ section {
   }
 
   .client-reviews {
-    background-image: url('https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Freviews_backdrop.png?v=1624496737069');
-    background-repeat: no-repeat;
-    background-color: #444C55;
-    background-size: cover;
+    background-color: #FFFFFF;
+    // background-size: cover;
     opacity: .74;
 
     .text-container {
@@ -467,7 +465,7 @@ section {
         line-height: 26px;
         font-size: 18px;
         margin-bottom: 0;
-        color: #FFFFFF;
+        color: #000000;
       }
 
       .description-title {
@@ -476,24 +474,24 @@ section {
         line-height: 26px;
         font-size: 40px;
         margin-top: 5px;
-        color: #FFFFFF;
+        color: #000000;
       }
 
       .client-reviews-container {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
 
         .client-review {
-          margin-right: 15px;
-          color: #FFFFFF;
+          margin-bottom: 15px;
           width: 100%;
 
-          p {
+          p, p.client {
             font-family: 'Open Sans', cursive;
             line-height: 26px;
             font-size: 18px;
-            color: #FFFFFF;
-            margin: 0;
+            color: #000000;
+            margin-top: 0;
           }
         }
 
@@ -527,20 +525,6 @@ section {
 
           .description-title {
             font-size: 30px;
-          }
-        }
-
-        .client-reviews-container {
-          flex-direction: column;
-
-
-          .client-review {
-            margin-bottom: 15px;
-
-            p, p.client {
-              color: #000000;
-              margin-top: 0;
-            }
           }
         }
       }
