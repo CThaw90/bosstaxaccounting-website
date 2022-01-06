@@ -100,21 +100,17 @@ nav {
 
 section {
   .desktop-backdrop {
-    /* background-image: url('https://cdn.glitch.com/d308c4b2-3f81-45d4-a9eb-d37601fbb06c%2Fcoins_backdrop.png?v=1624496709129'); */
     background-repeat: no-repeat;
     background-color: #000000;
     background-size: 90% 100%;
-    padding: 150px 0 0 150px;
-    height: 450px;
-
-    @media only screen and (max-width: 800px) {
-      padding: 150px 0 0 75px;
-    }
+    text-align: center;
+    padding: 50px;
+    height: 250px;
 
     @media only screen and (max-width: 600px) {
       background-size: 100% 100%;
       text-align: center;
-      padding: 125px 15px 0 15px;
+      padding: 25px 15px;
     }
 
     .desktop-slogan {
@@ -126,7 +122,6 @@ section {
 
     .desktop-slogan-caption {
       font-family: 'Open sans', cursive;
-      max-width: 500px;
       margin: 0 0 10px 0;
     }
 
@@ -219,6 +214,10 @@ section {
         }
       }
     }
+
+    .additional-offers {
+      height: 750px;
+    }
   }
 
   .desktop-translated, .tablet-translated {
@@ -286,6 +285,54 @@ section {
     .tablet-translated {
       display: none;
     }
+
+    .additional-offers {
+      height: 1350px;
+
+      .additional-offers-section-container {
+        align-items: center;
+
+        div.additional-offer-card-row {
+          flex-direction: column;
+          margin: 0;
+        }
+      }
+
+      .additional-offer-card {
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+
+  .additional-offers {
+    margin: 75px 50px;
+
+    .title {
+      font-family: 'Open sans', serif;
+      margin: 5px 0 5px 0;
+      line-height: 26px;
+      font-size: 18px;
+      color: #62727B;
+    }
+
+    .additional-offer-card-row {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .additional-offer-image {
+      height: 300px;
+      width: 280px;
+    }
+  }
+
+  .additional-offers-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .meet-the-team {
