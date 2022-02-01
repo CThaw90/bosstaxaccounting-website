@@ -20,7 +20,7 @@
     "git-prod-branch": "git branch -f production",
     "git-prod-add": "git add -f dist",
     "git-prod-commit": "git commit -m \"Deploying version $npm_package_version to production\"",
-    "git-prod-publish": "git push -u origin production",
+    "git-prod-publish": "git push -uf origin production",
     "production-build": "yarn install --ignore-engines && webpack --mode=production",
     "production-deploy": "mv docker/dist dist && yarn git-prod-branch && yarn git-prod-add && yarn git-prod-commit && yarn git-prod-publish"
   },
